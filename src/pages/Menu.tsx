@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { menuItems, categories } from "@/data/menuData";
 import MenuItemCard from "@/components/MenuItemCard";
 import ProductModal from "@/components/ProductModal";
+import SEO from "@/components/SEO";
 import type { MenuItem } from "@/data/menuData";
 
 const Menu = () => {
@@ -34,6 +35,11 @@ const Menu = () => {
 
   return (
     <div className="w-full pt-20 md:pt-24 pb-20 px-4 md:px-8 lg:px-12">
+      <SEO 
+        title="Our Menu | FRYDAY"
+        description="Explore the full FRYDAY menu. From our signature smash beef burgers to our world-famous loaded Korean fries."
+        keywords="burger menu, loaded fries varieties, Nashville hot chicken, Korean wings menu"
+      />
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

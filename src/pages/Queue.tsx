@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { motion, AnimatePresence } from "framer-motion";
+import SEO from "@/components/SEO";
 
 export default function Queue() {
   const [orders, setOrders] = useState<any[]>([]);
@@ -25,6 +26,11 @@ export default function Queue() {
 
   return (
     <div className="min-h-screen bg-background pt-24 px-4 md:px-12 pb-12">
+      <SEO 
+        title="Order Status Board | FRYDAY"
+        description="Real-time order status and pickup queue for FRYDAY. Watch for your display ID."
+        keywords="order status, pickup queue, fryday orders, live order tracking"
+      />
       <div className="text-center mb-10">
         <h1 className="text-5xl md:text-6xl font-heading text-primary tracking-tight">ORDER STATUS</h1>
         <p className="mt-2 text-muted-foreground font-medium uppercase tracking-widest text-sm">Please watch this screen for your order number</p>

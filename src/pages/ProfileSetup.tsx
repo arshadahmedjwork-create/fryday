@@ -4,6 +4,7 @@ import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
+import SEO from "@/components/SEO";
 
 const ProfileSetup = () => {
   const { user } = useAuth();
@@ -38,6 +39,7 @@ const ProfileSetup = () => {
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <SEO title="Complete Profile" noindex />
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-md w-full space-y-8 bg-card p-8 rounded-2xl border border-border mt-16 shadow-xl">
         <div>
           <h2 className="mt-6 text-center text-3xl font-heading text-foreground">Complete your profile</h2>

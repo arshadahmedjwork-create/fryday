@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { sendOrderConfirmation } from "@/lib/email";
+import SEO from "@/components/SEO";
 
 const Checkout = () => {
   const { items, total, clearCart } = useCart();
@@ -94,6 +95,7 @@ const Checkout = () => {
 
   return (
     <div className="pt-24 pb-16 px-4 max-w-3xl mx-auto">
+      <SEO title="Secure Checkout" noindex />
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-card p-6 sm:p-10 rounded-2xl border border-border shadow-sm">
         <h1 className="text-4xl font-heading mb-8 text-foreground text-center">Order Summary</h1>
         

@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/fryday-logo-full.png";
+import SEO from "@/components/SEO";
 
 const About = () => {
   return (
     <div className="w-full min-h-screen pt-20 md:pt-24 pb-20 px-4 md:px-8 lg:px-12 flex items-center">
+      <SEO 
+        title="Our Story | FRYDAY"
+        description="Learn about FRYDAY's mission to bring global street food culture and bold flavors to your plate."
+        keywords="about fryday, brand story, restaurant values, fast food innovation"
+      />
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <motion.img
           initial={{ opacity: 0, scale: 0.8 }}

@@ -4,6 +4,7 @@ import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/context/AuthContext";
 import { motion } from "framer-motion";
 import { FileText, ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const OrderHistory = () => {
   const { user } = useAuth();
@@ -40,6 +41,7 @@ const OrderHistory = () => {
 
   return (
     <div className="min-h-[85vh] pt-24 pb-16 px-4 md:px-8 max-w-5xl mx-auto">
+      <SEO title="My Orders" noindex />
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-4xl font-heading mb-2 text-foreground">Order History</h1>
         <p className="text-muted-foreground mb-10 font-medium">Review your past cravings and print old invoices.</p>

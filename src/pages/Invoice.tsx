@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
 import { Printer, ArrowLeft } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Invoice = () => {
   const { orderId } = useParams();
@@ -53,6 +54,7 @@ const Invoice = () => {
 
   return (
     <div className="min-h-screen bg-background pt-32 md:pt-40 pb-16 px-4 print:pt-12 print:px-8 print:bg-white print:text-black">
+      <SEO title={`Invoice #${orderId?.split('-')[0].toUpperCase()}`} noindex />
       <div className="max-w-3xl mx-auto">
         {/* Screen Only Controls */}
         <div className="flex justify-between items-center mb-8 print:hidden">

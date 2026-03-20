@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
+import SEO from "@/components/SEO";
 
 const Auth = () => {
   const [email, setEmail] = useState("");
@@ -52,6 +53,11 @@ const Auth = () => {
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <SEO 
+        title={isLogin ? "Sign In | FRYDAY" : "Join FRYDAY"}
+        description="Join the FRYDAY community for exclusive offers and a faster checkout experience."
+        keywords="login, signup, fryday community, burger account"
+      />
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

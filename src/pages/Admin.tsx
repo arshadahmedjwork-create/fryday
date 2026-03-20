@@ -3,6 +3,7 @@ import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
 import { CheckCircle, Clock } from "lucide-react";
 import { sendOrderReady } from "@/lib/email";
+import SEO from "@/components/SEO";
 
 export default function Admin() {
   const [orders, setOrders] = useState<any[]>([]);
@@ -57,6 +58,7 @@ export default function Admin() {
 
   return (
     <div className="min-h-screen pt-24 px-4 max-w-7xl mx-auto pb-16">
+      <SEO title="Admin Portal" noindex />
       <h1 className="text-4xl font-heading mb-8 text-foreground">Admin Portal</h1>
       <div className="flex gap-4 mb-8 border-b border-border pb-4">
         <button onClick={() => setTab("active")} className={`text-lg font-semibold transition-colors ${tab === "active" ? "text-primary border-b-2 border-primary" : "text-muted-foreground hover:text-foreground"}`}>Active Orders</button>
